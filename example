@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <string.h>
+
+void turninsideout(char array[]){
+    
+    int i,length,temporary;
+    
+    length = strlen(array);
+    
+    i=0;
+    
+    while(i<length/2){
+        
+        
+        temporary = array[i];
+        array[i] = array[length-1-i];
+        array[length-1-i] = temporary;
+        i++;
+    }
+    
+}
+
+int main() {
+    
+    char text[200];
+    
+    scanf("%s",text);
+    
+    turninsideout(text);
+    
+    printf("%s\n",text);
+    
+    
+    return 0;
+}
+
+
+
+
+
